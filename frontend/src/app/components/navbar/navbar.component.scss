@@ -1,0 +1,70 @@
+$primary-color: #121212;  // Dark background color
+$secondary-color: #FFFEFE;  // Light text color
+$hover-color: #306665;  // Hover color for links
+$border-color: #444444;  // Darker border color for better contrast
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 1rem;
+  border-bottom: 1px solid $border-color;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $secondary-color;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    .nav-item {
+      margin-left: 1rem;
+
+      .nav-link {
+        text-decoration: none;
+        color: $secondary-color;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: $hover-color;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+
+      .nav-item {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+
+        .nav-link {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+$background-color: #121212;
+$card-background-color: #000000b7;
+$text-color: #ffffff;
+$input-background-color: #272727;
+$input-border-color: #444444;
+$button-background-color: #007bff;
+$button-hover-color: #0056b3;
+$error-color: rgb(255, 0, 0);
+
+.signupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+
+  background: url('../../../assets/Bgs/multi-thread.jpg') no-repeat center center fixed;
+  background-size: cover;
+
+ 
+
+  background-color: $background-color;
+}
+
+.signupForm {
+  background: $card-background-color;
+  padding: 2rem;
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: $text-color;
+    }
+
+    .form-control {
+      width: 90%;
+      padding: 0.75rem;
+      background-color: $input-background-color;
+      border: 1px solid $input-border-color;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: $text-color;
+
+      &:focus {
+        border-color: $button-background-color;
+      }
+    }
+
+    .error {
+      margin-top: 0.5rem;
+      color: $error-color;
+      font-size: 0.875rem;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: $button-background-color;
+    color: $text-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+
+    &:disabled {
+      background-color: $input-border-color;
+      cursor: not-allowed;
+    }
+  }
+}
+
+
+.signIn{
+  color: $text-color;
+
+  a{
+    text-decoration: none;
+    color: greenyellow;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }
+}
